@@ -18,7 +18,7 @@ Then, add this line to the end of your .bash_aliases file in your home directory
 alias task='"{path to the directory}/addtask"'
 ```
 
-Add reminder.sh to the Startup Applications to make the reminder run regularly.
+Finally, add reminder.sh to the Startup Applications to make the reminder run regularly.
 
 ## Usage
 

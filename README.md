@@ -18,7 +18,7 @@ alias task='"{path to the directory}/addtask"'
 
 ## Usage
 
-There are 7 modes to add a task. These are as following:
+There are 6 modes to add a task. These are as following:
 
 #### Hourly Tasks
 ```bash
@@ -45,16 +45,15 @@ task -m task_name
 task -y task_name
 ```
 
-#### Same Day Tasks
-```bash
-task -t task_name HH MM
-```
-
 #### Non-repetitive Tasks
 ```bash
 task task_name DD MM (or M) YYYY HH MM SS
 ```
 
+If the task you're going to add is within the same day, you can simply run the line below as well:
+```bash
+task -t task_name HH MM
+```
 
 
 

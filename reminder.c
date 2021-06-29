@@ -21,8 +21,8 @@ int main(){
     current_time = malloc(sizeof(struct tm));    
     current_time = gettime();
 
-    fp = fopen("/home/yanci/Documents/C Projects/REMINDER/.tasks", "r+");		/*change this line according to your directory*/
-    temp = fopen("/home/yanci/Documents/C Projects/REMINDER/.temp", "w");		/*change this line according to your directory*/
+    fp = fopen("/home/yanci/Documents/C Projects/REMINDER/.tasks", "r+");       /*change this line according to your directory*/
+    temp = fopen("/home/yanci/Documents/C Projects/REMINDER/.temp", "w");       /*change this line according to your directory*/
 
     while (1){
         char notif_command[55] = "notify-send 'Reminder' '";
@@ -112,8 +112,8 @@ int main(){
             }
             break;
 
-        default:
-            if (current_time->tm_mday == day && current_time->tm_mon == month && current_time->tm_year == year && current_time->tm_hour == hour && current_time->tm_min == minute){
+        case 'n':
+        	if (current_time->tm_mday == day && current_time->tm_mon == month && current_time->tm_hour == hour && current_time->tm_min == minute){
                 strcat(notif_command, name);
                 strcat(notif_command, close);
                 system(notif_command);
@@ -121,7 +121,10 @@ int main(){
 
             else{
                 fprintf(temp, "%d %d %d   %d %d %d %d %s   %c\n", day, month, year, hour, minute, second, weekday, name, repeat);
-            }
+                }
+            break;
+
+        default:
             break;
         }
     }
@@ -129,7 +132,7 @@ int main(){
     fprintf(temp, "%d %d %d   %d %d %d %d %s   %c", 0, 0, 0, 0, 0, 0, 0, "NULL", '0');
     fclose(temp);
     fclose(fp);
-    system("mv '/home/yanci/Documents/C Projects/REMINDER/.temp' '/home/yanci/Documents/C Projects/REMINDER/.tasks'");		/*change this line according to your directory*/
+    system("mv '/home/yanci/Documents/C Projects/REMINDER/.temp' '/home/yanci/Documents/C Projects/REMINDER/.tasks'");          /*change this line according to your directory*/
     return 0;
 }
 

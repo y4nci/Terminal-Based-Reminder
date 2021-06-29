@@ -3,11 +3,13 @@ A terminal based reminder.
 
 ## Installation
 
-Download the package as a .zip and extract. Change the marked lines in the files and then set the current working directory as the extracted directory and simply run this:
+Download the package as a .zip and extract. Change the marked lines in the files. Then, set the current working directory as the extracted directory and run these lines:
 
 ```bash
 make
+chmod +x reminder.sh
 ```
+
 
 Then, add this line to the end of your .bash_aliases file in your home directory (create the file if it doesn't exist):
 
@@ -15,6 +17,8 @@ Then, add this line to the end of your .bash_aliases file in your home directory
 ```bash
 alias task='"{path to the directory}/addtask"'
 ```
+
+Add reminder.sh to the Startup Applications to make the reminder run regularly.
 
 ## Usage
 

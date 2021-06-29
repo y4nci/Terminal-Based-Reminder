@@ -63,7 +63,7 @@ int main(int argc, char *argv[]){
     }
 
     else {
-        fprintf(temp, "%d %d %d   %d %d %d %d %s   %c\n", atoi(argv[2]), atoi(argv[3]), atoi(argv[4]), atoi(argv[5]), atoi(argv[6]), current_time->tm_sec, current_time->tm_wday, argv[1], 'n');
+        fprintf(temp, "%d %d %d   %d %d %d %d %s   %c\n", atoi(argv[2]), atoi(argv[3]) - 1, atoi(argv[4]) - 1900, atoi(argv[5]), atoi(argv[6]), current_time->tm_sec, current_time->tm_wday, argv[1], 'n');
     }
 
     fprintf(temp, "%d %d %d   %d %d %d %d %s   %c", 0, 0, 0, 0, 0, 0, 0, "NULL", '0');

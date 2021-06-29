@@ -77,9 +77,7 @@ int main(){
         case 'h':
             if (current_time->tm_hour != hour){
                 strcat(notif_command, name);
-                printf("%s\n", notif_command);
                 strcat(notif_command, close);
-                printf("%s\n", notif_command);
                 system(notif_command);
                 fprintf(temp, "%d %d %d   %d %d %d %d %s   %c\n", current_time->tm_mday, current_time->tm_mon, current_time->tm_year, current_time->tm_hour, current_time->tm_min, current_time->tm_sec, current_time->tm_wday, name, repeat);
             }

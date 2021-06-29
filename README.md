@@ -3,7 +3,7 @@ A terminal based reminder.
 
 ## Installation
 
-Download the package as a .zip and extract. Then set the current working directory as the extracted directory and simply run:
+Download the package as a .zip and extract. Change the marked lines in the files and then set the current working directory as the extracted directory and simply run this:
 
 ```bash
 make

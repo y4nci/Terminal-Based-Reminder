@@ -1,0 +1,22 @@
+The usage is as follows:
+
+Hourly Tasks:
+	task -h task_name
+
+Daily Tasks:
+	task -d task_name
+
+Weekly Tasks:
+	task -w task_name
+
+Monthly Tasks:
+	task -m task_name
+
+Annual Tasks:
+	task -y task_name
+
+Non-repetitive Tasks:
+	task task_name DD MM (or M) YYYY HH MM SS
+
+Same-day Tasks:
+	task -t task_name HH MM

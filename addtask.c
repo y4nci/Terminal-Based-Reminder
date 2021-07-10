@@ -20,6 +20,12 @@ int main(int argc, char *argv[]){
 
     current_time = malloc(sizeof(struct tm));    
     current_time = gettime();
+    
+    if (!strcmp(argv[1], "help")){
+    	printf("the usage is as follows:\n\n");
+    	system("cat .help");
+    	return 0;
+    }
 
     while (1){
         int day, month, year, hour, minute, second, weekday;
